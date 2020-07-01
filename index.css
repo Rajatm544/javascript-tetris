@@ -1,0 +1,43 @@
+body,
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 400px;
+    background: black;
+}
+
+.grid div {
+    width: 18px;
+    height: 18px;
+    border: 1px solid white;
+}
+
+.tetrimino {
+    background-color: red;
+}
+
+.mini-grid {
+    margin-left: 75px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80px;
+    height: 80px;
+    background: black;
+}
+
+.mini-grid div {
+    width: 18px;
+    height: 18px;
+    border: 1px solid white;
+}
