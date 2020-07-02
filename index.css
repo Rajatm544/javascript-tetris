@@ -1,12 +1,84 @@
 body,
 html {
     height: 100%;
-    overflow: hidden;
+    margin: 0;
+    background-color: rgb(224, 57, 57);
+}
+
+@media (min-width: 769px) {
+
+    body,
+    html {
+        overflow: hidden;
+        margin: 0 10%;
+    }
+}
+
+.page {
+    min-height: 100%;
+    background: rgb(250, 195, 173);
+}
+
+h1 {
+    display: inline-flex;
+    margin: 10px 0 0 0;
+    padding: 10px 0 0 0;
+    border-bottom: 3px solid rgb(224, 57, 57);
+    border-radius: 50;
+    text-shadow: -4px 0 rgb(224, 57, 57),
+        0 4px rgb(224, 57, 57),
+        4px 0 rgb(224, 57, 57),
+        0 -4px rgb(224, 57, 57);
+}
+
+#tetris span {
+    font-size: 55px;
+    font-weight: bold;
+    margin: 1px;
+}
+
+button {
+    background: rgb(224, 57, 57);
+    color: white;
+    border: none;
+    padding: 8px;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 2em;
+    outline: none;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-weight: bolder;
+    text-shadow: -2px 0 rgb(224, 57, 57),
+        0 2px rgb(224, 57, 57),
+        2px 0 rgb(224, 57, 57),
+        0 -2px rgb(224, 57, 57);
+}
+
+h3 {
+    font-size: 20px;
+    color: white;
+    margin: 10px 0 0 0;
+    font-weight: bold;
+    text-shadow: -2px 0 rgb(224, 57, 57),
+        0 2px rgb(224, 57, 57),
+        2px 0 rgb(224, 57, 57),
+        0 -2px rgb(224, 57, 57);
+
 }
 
 .container {
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .grid {
@@ -14,30 +86,98 @@ html {
     flex-wrap: wrap;
     width: 200px;
     height: 400px;
-    background: black;
+    background: #1B1B1B;
 }
 
 .grid div {
     width: 18px;
     height: 18px;
-    border: 1px solid white;
+    border: 1px solid rgb(250, 195, 173);
+    border-radius: 3px;
 }
 
-.tetrimino {
-    background-color: red;
+.nextTetrimino {
+    background-color: gold;
+}
+
+.jTetrimino {
+    background-color: #FF00CC;
+}
+
+.lTetrimino {
+    background-color: #00CCCC;
+}
+
+.tTetrimino {
+    background-color: lawngreen;
+}
+
+.sTetrimino {
+    background-color: #28CF75;
+}
+
+.zTetrimino {
+    background-color: orangered;
+}
+
+.iTetrimino {
+    background-color: crimson;
+}
+
+.oTetrimino {
+    background-color: #9400D3;
 }
 
 .mini-grid {
-    margin-left: 75px;
     display: flex;
     flex-wrap: wrap;
-    width: 80px;
-    height: 80px;
-    background: black;
+    margin-left: 100px;
+    width: 100px;
+    height: 100px;
+    background: #1B1B1B;
 }
 
 .mini-grid div {
     width: 18px;
     height: 18px;
-    border: 1px solid white;
+    border: 1px solid rgb(250, 195, 173);
+    border-radius: 3px;
+}
+
+#help-overlay {
+    position: fixed;
+    display: none;
+    /* Hidden by default */
+    width: 50%;
+    height: 70%;
+    top: 15%;
+    left: 5%;
+    right: 5%;
+    bottom: 0;
+    margin: 0 auto;
+    background-color: rgb(224, 57, 57, 0.7);
+    /* Black background with opacity */
+    z-index: 2;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border: 2px solid white;
+    border-radius: 10px;
+
+}
+
+#help-overlay h3 {
+    font-size: 30px;
+    display: inline-flex;
+    margin: 5px 0 0 5px;
+    padding: 0;
+    border-bottom: 2px solid white;
+}
+
+#help-overlay #close {
+    float: right;
+    padding-right: 5px;
 }
