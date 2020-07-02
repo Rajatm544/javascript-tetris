@@ -74,7 +74,7 @@ h3 {
 }
 
 .container {
-    margin-top: 20px;
+    margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -132,6 +132,7 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     margin-left: 100px;
+    margin-bottom: 50px;
     width: 100px;
     height: 100px;
     background: #1B1B1B;
