@@ -322,7 +322,7 @@ startBtn.addEventListener("click", () => {
         startBtn.innerHTML = "Pause Game";
         draw();
         // Let the interval of starting the next tetrimino depend on the current Level
-        timerId = setInterval(moveDown, 500 / currentLevel);
+        timerId = setInterval(moveDown, Math.round(750 / currentLevel));
         nextRandomTetrimino = Math.floor(Math.random() * allTetriminoes.length);
         displayNext();
     }
