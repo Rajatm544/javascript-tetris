@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="theme" content="#fff" />
-        <title>Tetris</title>
-        <meta name="description" content="Javascript Tetris game" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="./index.css" />
-    </head>
 
-    <body>
-        <h3>Score: <span id="score">0</span></h3>
-        <button id="start-btn">Start Game</button>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme" content="#fff" />
+    <title>Tetris</title>
+    <meta name="description" content="Javascript Tetris game" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+    <div class="page">
+        <center>
+            <h1><span id="tetris">TETRIS</span></h1>
+            <h3>Level : <span id="level">1</span></h3>
+            <h2>Score : <span id="score">0</span></h2>
+            <button id="start-btn">Start Game</button>
+            <button id="help-btn">Help</button>
+
+            <div id="help-overlay">
+                <h3>HELP</h3>
+                <span id="close">&#10005; </span>
+                <p>1) Click ← to move left.</p>
+                <p>2) Click → to move right.</p>
+                <p>3) Click ↓ to move down.</p>
+                <p>4) Click ↑ to rotate the piece.</p>
+                <p>5) After you manage to fill an entire row, you get 10 points.</p>
+                <p>6) You level up after every 100 points.</p>
+                <p>7) The mini grid displays the next piece.</p>
+            </div>
+        </center>
+
         <div class="container">
             <div class="grid"></div>
             <div class="mini-grid"></div>
         </div>
-        <script src="./script.js"></script>
-    </body>
+
+    </div>
+    < <script src="./script.js">
+        </script>
+</body>
+
 </html>
