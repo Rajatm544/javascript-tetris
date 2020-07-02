@@ -179,5 +179,7 @@ h3 {
 
 #help-overlay #close {
     float: right;
-    padding-right: 5px;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
 }
