@@ -47,18 +47,6 @@ for (let letter of tetris.innerHTML) {
 tetris.innerHTML = "";
 tetris.appendChild(coloredText);
 
-// Add overlap when "Help" button is clicked
-const helpBtn = document.querySelector("#help-btn");
-const helpOverlay = document.querySelector("#help-overlay");
-
-helpBtn.addEventListener("click", () => {
-    helpOverlay.style.display = "block";
-});
-
-helpOverlay.addEventListener("click", () => {
-    helpOverlay.style.display = "none";
-});
-
 const width = 10;
 let allSquares = Array.from(document.querySelectorAll(".grid div"));
 const scoreDisplay = document.querySelector("#score");
@@ -67,6 +55,19 @@ let nextRandomTetrimino = 0;
 let timerId = 0;
 let score = 0;
 let currentLevel = 1;
+
+// Add overlap when "Help" button is clicked
+const helpBtn = document.querySelector("#help-btn");
+const helpOverlay = document.querySelector("#help-overlay");
+
+helpBtn.addEventListener("click", () => {
+    // Display the overlay message
+    helpOverlay.style.display = "block";
+});
+
+helpOverlay.addEventListener("click", () => {
+    helpOverlay.style.display = "none";
+});
 
 // All rotations of all tetris shapes, also called as a tetrimino
 const jTetrimino = [
@@ -130,7 +131,7 @@ const allTetriminoes = [
 ];
 
 //Set current position
-let currentPos = 3;
+let currentPos = 4;
 // Set random rotation for any given tetrimino shape
 let currentRotation = 0;
 // Object for setting the right color for the various tetriminoes
@@ -201,7 +202,6 @@ function freeze() {
         draw();
         displayNext();
         addScore();
-        levelUp();
         gameOver();
     }
 }
@@ -322,7 +322,7 @@ startBtn.addEventListener("click", () => {
         startBtn.innerHTML = "Pause Game";
         draw();
         // Let the interval of starting the next tetrimino depend on the current Level
-        timerId = setInterval(moveDown, Math.round(750 / currentLevel));
+        timerId = setInterval(moveDown, 750);
         nextRandomTetrimino = Math.floor(Math.random() * allTetriminoes.length);
         displayNext();
     }
@@ -355,6 +355,11 @@ function addScore() {
             const removedRow = allSquares.splice(i, width);
             allSquares = removedRow.concat(allSquares);
             allSquares.forEach((cell) => grid.appendChild(cell));
+
+            // Level up after every 100 points
+            if (!(score % 100)) {
+                levelUp();
+            }
         }
     }
 }
@@ -386,13 +391,9 @@ function gameOver() {
 // Level up after every 100 points
 function levelUp() {
     const levelDisplay = document.querySelector("#level");
-    // For every 100 points increase in the score
-    if (score && !(score % 100)) {
-        currentLevel++;
-        levelDisplay.innerHTML = currentLevel;
-        let prevScore = score;
-        if (score == prevScore) {
-            currentLevel--;
-        }
-    }
+    currentLevel++;
+    levelDisplay.innerHTML = currentLevel;
+    // Setinterval based on currentlevel to increase difficulty
+    clearInterval(timerId);
+    timerId = setInterval(moveDown, Math.round(750 / currentLevel));
 }
