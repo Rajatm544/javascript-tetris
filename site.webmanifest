@@ -1,1 +1,17 @@
-{"name":"","short_name":"","icons":[{"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],"theme_color":"#ffffff","background_color":"#ffffff","display":"standalone"}
+{
+    "name": "Tetris Game, built by Rajat",
+    "short_name": "Tetris",
+    "icons": [{
+        "src": "/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    }, {
+        "src": "/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }],
+    "theme_color": "rgb(224, 57, 57)",
+    "background_color": "rgb(224, 57, 57)",
+    "display": "standalone",
+    "start_url": "/index.html"
+}
