@@ -46,6 +46,15 @@
         </div>
 
     </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register('./sw-cached-pages.js')
+                    .then(reg => console.log("Service worker registered"))
+                    .catch(err => console.error(`Service Worker Error: ${err}`));
+            });
+        }
+    </script>
     <script src="./script.js"></script>
 </body>
 
