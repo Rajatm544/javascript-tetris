@@ -366,7 +366,13 @@ function gameOver() {
             allSquares[currentPos + index].classList.contains("frozen")
         )
     ) {
-        scoreDisplay.innerHTML = `Game over, you had scored ${score} points!`;
+        // Replace the h2 displaying the score, with an h2 displaying the game over message
+        const gameOverMsg = document.createElement("h2");
+        gameOverMsg.innerHTML = `Game over, you had scored ${score} points!`;
+        const scoreH2 = document.querySelector("h2");
+        scoreH2.replaceWith(gameOverMsg);
+
+        //Set the start button's innerHTML to indicate restarting the game
         startBtn.innerHTML = "Restart Game";
         clearInterval(timerId);
     }
