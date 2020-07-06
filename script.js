@@ -12,6 +12,8 @@ const all10divs = document.createDocumentFragment();
 for (let i = 0; i < 10; i++) {
     const div = document.createElement("div");
     div.classList.add("frozen");
+    // To wrap the visible grid with a 1px border, and not include the "frozen" divs in it
+    div.style.borderTop = "1px solid black";
     all10divs.appendChild(div);
 }
 grid.appendChild(all10divs);
