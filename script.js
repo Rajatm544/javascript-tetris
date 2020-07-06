@@ -63,10 +63,12 @@ const helpOverlay = document.querySelector("#help-overlay");
 helpBtn.addEventListener("click", () => {
     // Display the overlay message
     helpOverlay.style.display = "block";
+    document.querySelector("body").classList.add(".blurEffect");
 });
 
 helpOverlay.addEventListener("click", () => {
     helpOverlay.style.display = "none";
+    document.querySelector("body").classList.remove(".blurEffect");
 });
 
 // All rotations of all tetris shapes, also called as a tetrimino
@@ -395,5 +397,5 @@ function levelUp() {
     levelDisplay.innerHTML = currentLevel;
     // Setinterval based on currentlevel to increase difficulty
     clearInterval(timerId);
-    timerId = setInterval(moveDown, Math.round(750 / currentLevel));
+    timerId = setInterval(moveDown, Math.round(750 / (0.75 * currentLevel)));
 }
