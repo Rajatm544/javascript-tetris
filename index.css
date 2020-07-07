@@ -6,7 +6,6 @@ html {
 }
 
 @media (min-width: 769px) {
-
     body,
     html {
         overflow: hidden;
@@ -80,7 +79,7 @@ h3 {
     width: 200px;
     height: 400px;
     background: #1b1b1b;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 3px;
 }
 
@@ -131,7 +130,7 @@ h3 {
     width: 100px;
     height: 100px;
     background: #1b1b1b;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 3px;
 }
 
