@@ -31,12 +31,12 @@ miniGrid.appendChild(all25divs);
 let tetris = document.querySelector("#tetris");
 let coloredText = document.createDocumentFragment();
 let colours = [
-    "#FF681F",
-    "#00755E",
-    "#50BFE6",
-    "#FFD12A",
-    "#391285",
-    "#A7F432",
+    "#9400d3",
+    "#ff4500",
+    "#7cfc00",
+    "#ff00cc",
+    "#ffd700",
+    "#28cf75",
 ];
 let i = 0;
 for (let letter of tetris.innerHTML) {
@@ -381,9 +381,13 @@ function gameOver() {
         const scoreH2 = document.querySelector("h2");
         scoreH2.replaceWith(gameOverMsg);
 
-        //Set the start button's innerHTML to indicate restarting the game
-        startBtn.innerHTML = "Restart Game";
+        //Set the start button's innerHTML to indicate starting new game
+        startBtn.innerHTML = "New Game";
         clearInterval(timerId);
+
+        // Remove the help button from display
+        const helpBtn = document.querySelector("#help-btn");
+        helpBtn.style.display = "none";
     }
 
     // Restart game when user clicks the button
