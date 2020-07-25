@@ -2,10 +2,13 @@ body,
 html {
     height: 100%;
     margin: 0;
-    background-color: rgb(224, 57, 57);
+    /* background-color: rgb(224, 57, 57); */
+    background: rgb(224, 57, 57);
+    font-family: 'Rubik', sans-serif;
 }
 
 @media (min-width: 769px) {
+
     body,
     html {
         overflow: hidden;
@@ -16,6 +19,7 @@ html {
 .page {
     min-height: 100%;
     background: rgb(250, 195, 173);
+
 }
 
 h1 {
@@ -23,9 +27,9 @@ h1 {
     margin: 10px 0 0 0;
     padding: 10px 0 0 0;
     border-bottom: 3px solid rgb(224, 57, 57);
-    border-radius: 50;
-    text-shadow: -4px 0 rgb(224, 57, 57), 0 4px rgb(224, 57, 57),
-        4px 0 rgb(224, 57, 57), 0 -4px rgb(224, 57, 57);
+    border-radius: 10%;
+    text-shadow: -3px 0 rgb(224, 57, 57), 0 3px rgb(224, 57, 57),
+        3px 0 rgb(224, 57, 57), 0 -3px rgb(224, 57, 57);
 }
 
 #tetris span {
@@ -38,12 +42,14 @@ button {
     background: rgb(224, 57, 57);
     color: white;
     border: none;
-    padding: 8px;
+    box-shadow: inset 0 0 5px 3px rgba(156, 38, 38, 0.9);
+    padding: 10px;
+    outline: none;
     font-size: larger;
     font-weight: bold;
     border-radius: 2em;
-    outline: none;
     cursor: pointer;
+    min-width: 160px;
 }
 
 h2 {
@@ -103,7 +109,7 @@ h3 {
 }
 
 .tTetrimino {
-    background-color: lawngreen;
+    background-color: #7cfc00;
 }
 
 .sTetrimino {
@@ -130,6 +136,7 @@ h3 {
     width: 100px;
     height: 100px;
     background: #1b1b1b;
+
     border: 2px solid black;
     border-radius: 3px;
 }
@@ -154,7 +161,6 @@ h3 {
     margin: 0 auto;
     background-color: rgb(224, 57, 57, 0.7);
     box-shadow: inset 0 0 12px 4px rgba(156, 38, 38, 0.9);
-    /* Black background with opacity */
     z-index: 2;
     cursor: pointer;
     color: white;
@@ -163,22 +169,14 @@ h3 {
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
     border: 2px solid white;
-    border-radius: 10px;
+    border-radius: 10%;
 }
 
 #help-overlay h3 {
     font-size: 30px;
     display: inline-flex;
-    margin: 5px 0 0 5px;
-    padding: 0;
+    margin-top: 5%;
+    /* padding: 0; */
     border-bottom: 2px solid white;
-}
-
-#help-overlay #close {
-    float: right;
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-    font-size: 1.5rem;
-    margin-right: 10px;
+    border-radius: 10%;
 }
