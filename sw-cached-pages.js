@@ -1,4 +1,4 @@
-const cacheName = "v1";
+const cacheName = "v2";
 
 const cachedAssets = ["index.html", "index.css", "script.js"];
 
@@ -8,24 +8,20 @@ self.addEventListener("install", (e) => {
         caches
             .open(cacheName)
             .then((cache) => {
-                console.log("Service worker: caching assets");
                 cache.addAll(cachedAssets);
             })
             .then(() => self.skipWaiting())
     );
-    console.log("Service Worker: Caching Assets");
 });
 
 // Call activate event
 self.addEventListener("activate", (e) => {
-    console.log("Service Worker activated");
     // Remove unwanted caches
     e.waitUntil(
         caches.keys().then((cacheNames) => {
             return Promise.all(
                 cacheNames.map((cache) => {
                     if (cache !== cacheName) {
-                        console.log("Service Worker: Clearing old cache");
                         return caches.delete(cache);
                     }
                 })
@@ -36,6 +32,5 @@ self.addEventListener("activate", (e) => {
 
 // Call fetch event
 self.addEventListener("fetch", (e) => {
-    console.log("Service Worker: Fetching");
     e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
 });
