@@ -390,8 +390,8 @@ function gameOver() {
         helpBtn.style.display = "none";
     }
 
-    // Restart game when user clicks the button
-    if (startBtn.innerHTML === "Restart Game") {
+    // Restart game when user clicks the button for a new game
+    if (startBtn.innerHTML === "New Game") {
         startBtn.addEventListener("click", () => window.location.reload());
     }
 }
