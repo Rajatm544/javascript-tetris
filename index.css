@@ -4,11 +4,10 @@ html {
     margin: 0;
     /* background-color: rgb(224, 57, 57); */
     background: rgb(224, 57, 57);
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
 }
 
 @media (min-width: 769px) {
-
     body,
     html {
         overflow: hidden;
@@ -19,7 +18,9 @@ html {
 .page {
     min-height: 100%;
     background: rgb(250, 195, 173);
-
+    -webkit-box-shadow: inset 1px 1px 31px -7px rgba(148, 19, 19, 1);
+    -moz-box-shadow: inset 1px 1px 31px -7px rgba(148, 19, 19, 1);
+    box-shadow: inset 1px 1px 31px -7px rgba(148, 19, 19, 1);
 }
 
 h1 {
