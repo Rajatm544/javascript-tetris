@@ -35,7 +35,7 @@ let colours = [
     "#ff4500",
     "#7cfc00",
     "#ff00cc",
-    "#ffd700",
+    "#00cccc",
     "#28cf75",
 ];
 let i = 0;
