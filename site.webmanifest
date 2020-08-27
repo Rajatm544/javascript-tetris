@@ -5,15 +5,15 @@
         "src": "./android-chrome-192x192.png",
         "sizes": "192x192",
         "type": "image/png",
-        "purpose": "maskable"
+        "purpose": "maskable any"
     }, {
         "src": "./android-chrome-512x512.png",
         "sizes": "512x512",
         "type": "image/png",
-        "purpose": "maskable"
+        "purpose": "maskable any"
     }],
     "theme_color": "rgb(224, 57, 57)",
     "background_color": "rgb(224, 57, 57)",
     "display": "standalone",
-    "start_url": "/index.html"
+    "start_url": "/"
 }
